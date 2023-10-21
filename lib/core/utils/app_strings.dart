@@ -15,6 +15,7 @@ class AppStrings {
   static const String multiply = "x";
   static const String divide = "/";
   static const String equal = "=";
-  static const String clear = "C";
+  static const String clear = "AC";
   static const String mod = "%";
+  static const String plus_mins = '+/-';
 }

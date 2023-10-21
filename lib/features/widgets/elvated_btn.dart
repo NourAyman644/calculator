@@ -10,15 +10,17 @@ class ElvatedBtn extends StatelessWidget {
     this.height = 77.2,
     required this.onPressed,
     this.color = AppColors.black,
+    this.fontSize = 35,
   }) : super(key: key);
   final String text;
   final VoidCallback onPressed;
   final double width;
   final double height;
   final Color color;
+  final double fontSize;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: height,
       width: width,
       child: ElevatedButton(
@@ -26,10 +28,10 @@ class ElvatedBtn extends StatelessWidget {
         style: Theme.of(context).elevatedButtonTheme.style!.copyWith(
               backgroundColor: MaterialStateProperty.all<Color>(color),
             ),
-        child: Text(
-          text,
-          style: Theme.of(context).textTheme.displayMedium,
-        ),
+        child: Text(text,
+            style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                  fontSize: fontSize,
+                )),
       ),
     );
   }
